@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Zoom Effect</title>
+  <style>
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .image-box {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    #image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .zoom-box {
+      width: 300px;
+      height: 300px;
+      border: 2px solid #ddd;
+      overflow: hidden;
+      position: relative;
+      display: none; /* Hide the zoom box initially */
+    }
+
+    #zoomed-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.2s ease;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Image container -->
+  <div class="image-box">
+    <img src="https://via.placeholder.com/300" alt="Image" id="image">
+  </div>
+
+  <!-- Zoom container -->
+  <div class="zoom-box">
+    <img src="https://via.placeholder.com/300" alt="Zoomed Image" id="zoomed-image">
+  </div>
+</div>
+
+<script>
+  const image = document.getElementById('image');
+  const zoomedImage = document.getElementById('zoomed-image');
+  const imageBox = document.querySelector('.image-box');
+  const zoomBox = document.querySelector('.zoom-box');
+
+  imageBox.addEventListener('mousemove', (e) => {
+    const { offsetX, offsetY } = e; // Get the mouse position relative to the image
+    const { width, height } = imageBox.getBoundingClientRect();
+    
+    // Calculate the percentage of where the user is hovering
+    const xPercent = (offsetX / width) * 100;
+    const yPercent = (offsetY / height) * 100;
+    
+    // Set the zoomed image position
+    zoomBox.style.display = "block";  // Show the zoom box on hover
+    zoomedImage.style.transform = `translate(-${xPercent}%, -${yPercent}%) scale(2)`; // Zoom effect
+  });
+
+  imageBox.addEventListener('mouseleave', () => {
+    zoomBox.style.display = "none"; // Hide the zoom box when the mouse leaves
+  });
+</script>
+
+</body>
+</html>

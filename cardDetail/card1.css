@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    
+    font-family: cursive;
+    background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(204,158,167,1) 100%);
+/* overflow: hidden; */
+}
+
+.header {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 20px;
+    
+}
+
+.logo {
+    justify-content: start;
+    background-image: url("logo.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    
+}
+
+.nav {
+    padding-left: 30px;
+    position: absolute;
+    left: 15vh;
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+.nav-item {
+    color: #ffffff;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+.search-input {
+    border: none;
+    padding: 8px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 150px;
+}
+
+.search-btn {
+    
+    border: none;
+    
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #3A84E9;
+}
+.image{
+    background-color: #f0d4d0;
+    width: 300px;
+    height: 400px;
+    margin-left: 100px;
+    border-radius: 20px;
+
+}
+.image img {
+    height: 400px;
+    width: 300px;
+    background-image:auto;
+    border-radius: 20px;
+}
+.box{
+    display: flex;
+    gap: 30px;
+    border-radius: 20px;
+}
+.about{
+    height: 400px;
+    width: 600px;
+    background-color: #e8e9e9;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+#chat{
+    height: 30px;
+    width: 80px;
+    font-size: 20px;
+    border: 2px solid gray;
+}
