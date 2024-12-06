@@ -267,8 +267,31 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(204,158,167,1) 10
     font-size: 20px;
 }
 #detail:hover{
-    background-color: #74aeff;
+    background-color: #cae0ff;
+    background-color:rgb(59, 217, 59);
 }
 .card{
     box-shadow: rgba(0, 0, 0, 0.236) 2px 2px 2px 2px;
+}
+.card-section{
+    margin-left: 230px;
+    padding-top: 0px;
+}
+.list{
+    position: fixed;
+    bottom: 20px;
+}
+.cards1{
+    padding-top: 0px;
+}
+@keyframes zoom{
+   from{
+    transform: scale(0);
+   }
+   to{
+    transform: scale(0.2);
+   } 
+}
+.card:hover{
+    animation: zoom ;
 }

@@ -74,7 +74,7 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(204,158,167,1) 10
 }
 .image{
     background-color: #f0d4d0;
-    width: 300px;
+    width: 400px;
     height: 400px;
     margin-left: 100px;
     border-radius: 20px;
@@ -82,7 +82,7 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(204,158,167,1) 10
 }
 .image img {
     height: 400px;
-    width: 300px;
+    width: 400px;
     background-image:auto;
     border-radius: 20px;
 }
@@ -94,17 +94,63 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(204,158,167,1) 10
 .about{
     height: 400px;
     width: 600px;
-    background-color: #e8e9e9;
+    /* background-color: #e8e9e9; */
     padding: 5px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     border-radius: 20px;
     padding: 5px 20px;
+    background-color: whitesmoke;
 }
 #chat{
     height: 30px;
-    width: 80px;
-    font-size: 20px;
+    width: 150px;
+    padding: 5px;
     border: 2px solid gray;
+    border-radius: 20px;
+    margin-left:220px ;
+    margin-top: 25px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.298);
+    background-color: limegreen;
+    color: whitesmoke;
+}
+.div1{
+    background-color: #e8e9e9;
+    border-radius: 20px;
+    padding: 5px;
+}
+.div{
+    width: 30%;
+    background-color: #e8e9e9;
+    padding: 5px;
+    border-radius: 20px;
+}
+.div h3{
+    text-align: center;
+}
+.box3{
+    background-color: none ;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.box3 p{
+    background-color: #e8e9e9;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;  
+    padding-top: 5px;
+}
+#pre{
+    margin-top: 30px;
+    margin-left: 250px;
+    height: 80px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 40px;
+    padding: 0px;
+    background-color: rgb(223, 208, 191);
+
 }
